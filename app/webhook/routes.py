@@ -1,4 +1,4 @@
-from flask import Blueprint, json, request
+from flask import Blueprint, json, render_template, request
 from .requestparse import push_parser, pull_parser
 from ..extensions import mongo
 from datetime import datetime, timezone
@@ -7,6 +7,12 @@ from datetime import datetime, timezone
 
 webhook = Blueprint('Webhook', __name__, url_prefix='/webhook')
 
+
+@webhook.route('/', methods=["GET"])
+def home():
+    import os
+    print(os.getcwd())
+    return render_template('index.html')
 
 @webhook.route('/status', methods=["GET"])
 def status():
