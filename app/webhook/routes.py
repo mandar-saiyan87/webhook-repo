@@ -1,5 +1,5 @@
 from flask import Blueprint, json, request
-from .requestparse import push_parser
+from .requestparse import push_parser, pull_parser
 
 
 webhook = Blueprint('Webhook', __name__, url_prefix='/webhook')
@@ -17,5 +17,5 @@ def receiver():
     if request.headers['X-Github-Event'] == 'push':
         print(push_parser(request.json))
     elif request.headers['X-Github-Event'] == 'pull_request':
-        print(push_parser(request.json))
+        print(pull_parser(request.json))
     return {}, 200

@@ -30,23 +30,8 @@ X-Github-Hook-Installation-Target-Id: 1144981196
 X-Github-Hook-Installation-Target-Type: repository
 Accept-Encoding: gzip
 
-+++++++++++ Testing pull ++++++++++++++
-Host: daron-hasteful-undefensibly.ngrok-free.dev
-User-Agent: GitHub-Hookshot/9082f66
-Content-Length: 8186
-Accept: */*
-Content-Type: application/json
-X-Forwarded-For: 140.82.115.10
-X-Forwarded-Host: daron-hasteful-undefensibly.ngrok-free.dev
-X-Forwarded-Proto: https
-X-Github-Delivery: 8349902a-fd97-11f0-9c9b-4d393935b451
-X-Github-Event: push
-X-Github-Hook-Id: 593859582
-X-Github-Hook-Installation-Target-Id: 1144981196
-X-Github-Hook-Installation-Target-Type: repository
-Accept-Encoding: gzip
 
-+++++++++++++++ Actual Pull Request +++++++++++++++++++++++++++
++++++++++++++++ Testing Pull Request +++++++++++++++++++++++++++
 
 Host: daron-hasteful-undefensibly.ngrok-free.dev
 User-Agent: GitHub-Hookshot/9082f66
