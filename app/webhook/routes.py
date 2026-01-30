@@ -50,4 +50,4 @@ def get_events():
             event['created_at'] = event['created_at'].isoformat()
             events_list.append(event)
 
-        return {"events": events_list}, 200
+    return {"events": events_list}, 200
