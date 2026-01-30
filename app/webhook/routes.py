@@ -45,15 +45,19 @@ def receiver():
 def get_events():
     after = request.args.get('after')
 
+    event_query = {}
+
     if after:
-        events = mongo.db.events.find(
-            {'created_at': {"$gt": datetime.fromisoformat(after)}}).sort('created_at', -1)
+        event_query['created_at'] = {"$gt": datetime.fromisoformat(after)}
 
-        events_list = []
+    events = mongo.db.events.find(
+        event_query).sort('created_at', 1)
 
-        for event in events:
-            event['_id'] = str(event['_id'])
-            event['created_at'] = event['created_at'].isoformat()
-            events_list.append(event)
+    events_list = []
+    for event in events:
+        event['_id'] = str(event['_id'])
+        event['created_at'] = event['created_at'].isoformat()
+        events_list.append(event)
+
 
     return {"events": events_list}, 200
